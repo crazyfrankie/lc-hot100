@@ -7,6 +7,8 @@
 */
 package main
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -46,5 +48,23 @@ func mergetTwoList(list1 *ListNode, list2 *ListNode) *ListNode {
 }
 
 func main() {
+	head1 := &ListNode{Val: 1}
+	head1.Next = &ListNode{Val: 3}
+	head1.Next.Next = &ListNode{Val: 5}
+	head1.Next.Next.Next = &ListNode{Val: 6}
 
+	head2 := &ListNode{Val: 2}
+	head2.Next = &ListNode{Val: 4}
+	head2.Next.Next = &ListNode{Val: 7}
+	head2.Next.Next.Next = &ListNode{Val: 8}
+
+	head3 := &ListNode{Val: 0}
+	head3.Next = &ListNode{Val: 2}
+	head3.Next.Next = &ListNode{Val: 9}
+	head3.Next.Next.Next = &ListNode{Val: 11}
+
+	head := mergeKLists([]*ListNode{head1, head2, head3})
+	for curr := head; curr != nil; curr = curr.Next {
+		fmt.Println(curr.Val)
+	}
 }
