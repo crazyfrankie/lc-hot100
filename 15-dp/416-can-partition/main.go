@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 // dp[j] 代表从数组中选取若干数是否能凑出 j
+// 本题是动规中的第一种：可达性的题目，一般来说，采用 bool 类型作为 dp 数组的元素；
+// 当然采用 int 也行，那么就是把它当作另外一种：最大值的题目类型，只是最后判断的结果是 dp[target] == target
 func canPartition(nums []int) bool {
 	sum := 0
 	for _, i := range nums {
