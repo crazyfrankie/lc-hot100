@@ -29,13 +29,6 @@ func diameterOfBinaryTree(root *TreeNode) int {
 	return res
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	root := &TreeNode{Val: 1}
 	root.Left = &TreeNode{Val: 2}

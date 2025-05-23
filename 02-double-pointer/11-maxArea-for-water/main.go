@@ -20,14 +20,6 @@ func maxArea(height []int) int {
 	return max
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-
-	return b
-}
-
 func main() {
 	nums := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
 	fmt.Println(maxArea(nums)) // 输出49

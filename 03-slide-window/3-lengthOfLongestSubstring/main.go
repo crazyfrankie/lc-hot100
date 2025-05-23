@@ -28,13 +28,6 @@ func lengthOfLongestSubstring(s string) int {
 	return res
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	s := "abcabcbb"
 	fmt.Println(lengthOfLongestSubstring(s)) // 输出 3

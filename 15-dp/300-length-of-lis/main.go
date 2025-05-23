@@ -25,14 +25,6 @@ func lengthOfLIS(nums []int) int {
 	return res
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-
-	return b
-}
-
 func main() {
 	fmt.Println(lengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
 }

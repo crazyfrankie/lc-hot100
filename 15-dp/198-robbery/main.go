@@ -29,13 +29,6 @@ func rob(nums []int) int {
 	return dp[len(nums)-1]
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func main() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Println(rob(nums))
