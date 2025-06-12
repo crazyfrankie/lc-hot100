@@ -37,8 +37,8 @@ func combinationSum(candidates []int, target int) [][]int {
 	var result [][]int
 	var path []int
 	var sum int
-	var backtrack func(n, start, sum int)
-	backtrack = func(n, start, sum int) {
+	var backtrack func(start int)
+	backtrack = func(start int) {
 		if sum == target {
 			temp := make([]int, len(path))
 			copy(temp, path)
@@ -50,12 +50,12 @@ func combinationSum(candidates []int, target int) [][]int {
 		for i := start; i < n; i++ {
 			path = append(path, candidates[i])
 			sum += candidates[i]
-			backtrack(n, i, sum)
+			backtrack(i)
 			path = path[:len(path)-1]
 			sum -= candidates[i]
 		}
 	}
-	backtrack(n, 0, sum)
+	backtrack(0)
 
 	return result
 }
